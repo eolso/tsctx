@@ -17,7 +17,7 @@ FLAGS
         list available contexts
   --rename, -r
         rename current context
-  --home, -h
+  --home
         set home directory for tsctx (default $HOME/.local/share/tsctx)
 ```
 
