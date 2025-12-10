@@ -85,7 +85,25 @@ function tsctx --argument-names requested_ctx
 end
 
 function _tsctx_help
-    echo "USAGE: tsctx [-h | --help] [-s | --save] [-l | --list] [-r | --rename] [--home=HOME] [context]"
+    set help_string "\
+Context switcher linux cli for tailscale.
+
+USAGE
+  tsctx [flags] [context]
+
+FLAGS
+  --help, -h
+        show help
+  --save, -s
+        save current tailscale config
+  --list, -l
+        list available contexts
+  --rename, -r
+        rename current context
+  --home, -h
+        set home directory for tsctx (default $HOME/.local/share/tsctx)"
+
+    echo $help_string
 end
 
 function _tsctx_list --argument-names tsctx_home quiet ctx_search
