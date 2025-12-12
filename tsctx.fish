@@ -181,7 +181,7 @@ end
 
 function _tsctx_backup_tailscale --argument-names tsctx_home current_ctx
     if ! test -d "$tsctx_home"
-        mkdir "$tsctx_home"; or return 1
+        mkdir -p "$tsctx_home"; or return 1
     end
 
     if test -z "$current_ctx"
